@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class EnemyMovement : MonoBehaviour
 {
     public Transform Player;
-    int MoveSpeed = 4;
+    int MoveSpeed = 8;
     int MinDist = 0;
+    int MaxDist = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,13 @@ public class EnemyMovement : MonoBehaviour
 
         if (Vector3.Distance(transform.position, Player.position) >= MinDist)
         {
+            MoveSpeed = 8;
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+        }
+
+        if (Vector3.Distance(transform.position, Player.position) >= MaxDist)
+        {
+            MoveSpeed = 0;
         }
     }
 }
