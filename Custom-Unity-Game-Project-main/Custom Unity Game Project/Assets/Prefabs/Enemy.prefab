@@ -120,7 +120,6 @@ GameObject:
   - component: {fileID: 8891949221187860174}
   - component: {fileID: 8906415099899920819}
   - component: {fileID: 664653399036858509}
-  - component: {fileID: 8822530603258131469}
   - component: {fileID: -7972390540388049840}
   m_Layer: 7
   m_Name: Enemy
@@ -138,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 8891949221187860169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.89, y: 0.5, z: -1.23}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7220024092237218188}
@@ -256,21 +255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
---- !u!114 &8822530603258131469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8891949221187860169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8de5cd3e8648c64f86be8e288eb8005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 8891949221187860169}
-  SpawningRange: 5
-  isGameActive: 0
 --- !u!114 &-7972390540388049840
 MonoBehaviour:
   m_ObjectHideFlags: 0
