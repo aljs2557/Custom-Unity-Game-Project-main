@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: health
       value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 664653399036858509, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
+      propertyPath: MoveSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8891949221187860169, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
       propertyPath: m_Name
       value: StrongEnemy Variant
