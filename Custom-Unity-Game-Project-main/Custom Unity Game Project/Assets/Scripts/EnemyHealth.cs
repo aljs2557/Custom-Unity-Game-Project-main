@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject enemy;
     void Start()
     {
-        health = 100;
+        
     }
 
     private void Update()
@@ -23,7 +23,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.transform.CompareTag("Bullet"))
         {
-            health -= 50;
+            health -= 25;
         }
     }
 }

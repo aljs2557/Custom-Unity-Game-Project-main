@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject EnemyPrefab;
+    public GameObject[] enemies;
     public float SpawningRange;
     public bool isGameActive;
 
@@ -34,8 +34,9 @@ public class SpawnManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(10f);
-            Instantiate(EnemyPrefab, RandomSpawningPosition(), transform.rotation);
+            int index = Random.Range(0, enemies.Length - 1);
+            yield return new WaitForSeconds(Random.Range(5f, 15f));
+            Instantiate(enemies[index], RandomSpawningPosition(), transform.rotation);
         }
     }
 }

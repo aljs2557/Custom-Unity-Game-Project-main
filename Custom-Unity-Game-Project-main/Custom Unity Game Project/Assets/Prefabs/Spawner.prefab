@@ -44,6 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbddb554a83b8b747b665ebee107bc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 8891949221187860169, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
+  - {fileID: 8891949221187860169, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
+  - {fileID: 8891949221187860169, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
+  - {fileID: 8891949221187860169, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
+  - {fileID: 4624948401851279227, guid: 68fa2846d1beae343b571432e74c143c, type: 3}
+  - {fileID: 4624948401851279227, guid: 68fa2846d1beae343b571432e74c143c, type: 3}
+  - {fileID: 718945530696527367, guid: 04789fb89ea3af54186cfe23ca2bcb45, type: 3}
+  - {fileID: 718945530696527367, guid: 04789fb89ea3af54186cfe23ca2bcb45, type: 3}
   EnemyPrefab: {fileID: 8891949221187860169, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
   SpawningRange: 3
   isGameActive: 0

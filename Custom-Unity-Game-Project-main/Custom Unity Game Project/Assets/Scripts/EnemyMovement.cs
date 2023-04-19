@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyMovement : MonoBehaviour
 {
     public Transform Player;
-    int MoveSpeed = 8;
+    public float MoveSpeed;
     int MinDist = 0;
     int MaxDist = 1;
 
