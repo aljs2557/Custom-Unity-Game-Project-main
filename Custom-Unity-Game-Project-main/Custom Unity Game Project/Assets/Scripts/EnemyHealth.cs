@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public int worth;
     public int health;
     public GameObject enemy;
+    private PlayerHealth _player;
     void Start()
     {
-        
+        _player = GameObject.Find("Player").GetComponent< PlayerHealth > ();
     }
 
     private void Update()
     {
         if (health <= 0)
         {
+            _player.AddScore(worth);
             Destroy(gameObject);
         }
     }

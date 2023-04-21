@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
 {
     int health;
     public GameObject player;
+    private int _score;
+    public UIManager _UIManager;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void AddScore(int points)
+    {
+        _score += points;
+        _UIManager.UpdateScore(_score);
+    }
 
     void OnCollisionEnter(Collision collision)
     {

@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7972390540388049840, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
+      propertyPath: worth
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: -7972390540388049840, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
       propertyPath: health
       value: 50
       objectReference: {fileID: 0}
@@ -75,6 +79,10 @@ PrefabInstance:
     - target: {fileID: 8891949221187860173, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906415099899920819, guid: ba158bf33c4564842816e0b6173eddb1, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
