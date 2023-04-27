@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public int health;
     public GameObject enemy;
     private PlayerHealth _player;
+    public int damage;
     void Start()
     {
         _player = GameObject.Find("Player").GetComponent< PlayerHealth > ();
@@ -26,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.transform.CompareTag("Bullet"))
         {
-            health -= 25;
+            health -= damage;
         }
     }
 }

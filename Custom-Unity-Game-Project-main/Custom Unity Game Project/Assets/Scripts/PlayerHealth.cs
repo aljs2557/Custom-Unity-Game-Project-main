@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject player;
     private int _score;
     public UIManager _UIManager;
+    public StoreInteract StoreUI;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +22,18 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("FailureScreen");
         }
 
         //restart if player falls
         if (player.transform.position.y <= -3)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("FailureScreen");
+        }
+
+        if (_score >= 250)
+        {
+            SceneManager.LoadScene("WinScreen");
         }
     }
 
@@ -42,8 +48,7 @@ public class PlayerHealth : MonoBehaviour
         if (collision.transform.CompareTag("Enemy"))
         {
             health -= 10;
-
-            Debug.Log(health);
+            _UIManager.UpdateHealth(health);
         }
     }
 }
