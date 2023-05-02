@@ -37,21 +37,25 @@ public class StoreInteract : MonoBehaviour
     public void UpdgradeFireSpeed()
     {
         firingSpeed.setFireSpeed(firingSpeed.getFireSpeed() * .5f);
+        Debug.Log(firingSpeed.getFireSpeed());
     }
 
     public void UpgradeDamage()
     {
         damage.setDamage((int)(damage.getDamage() * 1.5));
+        Debug.Log(damage.getDamage());
     }
 
     public void UpgradeSpeed()
     {
         speed.setSpeed((float)(speed.getSpeed() * 1.5));
         speed.setRunningSpeed((float)(speed.getRunningSpeed() * 1.5));
+        Debug.Log(speed.getSpeed() + " " + speed.getRunningSpeed());
     }
 
     public void UpgradeDefense()
     {
-        defense.setDefense((int)(defense.getDefense() * .5));
+        defense.setDefense((int)(defense.getDefense() * .8));
+        Debug.Log(defense.getDefense());
     }
 }
