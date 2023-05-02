@@ -7,7 +7,7 @@ public class WeaponSystem : MonoBehaviour
     public GameObject bullet;
     public GameObject player;
     public float bullet_speed;
-    public float firing_speed;
+    public float firing_speed = 0.5f;
 
     bool cooldown = false;
 
@@ -29,5 +29,15 @@ public class WeaponSystem : MonoBehaviour
     {
         yield return new WaitForSeconds(firing_speed);
         cooldown = false;
+    }
+
+    public float getFireSpeed()
+    {
+        return firing_speed;
+    }    
+
+    public void setFireSpeed(float newFireSpeed)
+    {
+        firing_speed = newFireSpeed;
     }
 }

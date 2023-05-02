@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     int health;
+    public int defense = 10;
     public GameObject player;
     private int _score;
     public UIManager _UIManager;
@@ -22,17 +23,20 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health <= 0)
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("FailureScreen");
         }
 
         //restart if player falls
         if (player.transform.position.y <= -3)
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("FailureScreen");
         }
 
         if (_score >= 250)
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("WinScreen");
         }
     }
@@ -47,8 +51,18 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.transform.CompareTag("Enemy"))
         {
-            health -= 10;
+            health -= defense;
             _UIManager.UpdateHealth(health);
         }
+    }
+
+    public int getDefense()
+    {
+        return defense;
+    }
+
+    public void setDefense(int newDefense)
+    {
+        defense = newDefense;
     }
 }

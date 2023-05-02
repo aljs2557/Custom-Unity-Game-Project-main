@@ -5,12 +5,13 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int worth;
+    public EnHe damage;
     public int health;
     public GameObject enemy;
     private PlayerHealth _player;
-    public int damage;
     void Start()
     {
+        damage = GameObject.Find("controller").GetComponent<EnHe>();
         _player = GameObject.Find("Player").GetComponent< PlayerHealth > ();
     }
 
@@ -27,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.transform.CompareTag("Bullet"))
         {
-            health -= damage;
+            health -= damage.getDamage();
         }
     }
 }
