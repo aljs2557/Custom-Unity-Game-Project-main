@@ -65,4 +65,15 @@ public class PlayerHealth : MonoBehaviour
     {
         defense = newDefense;
     }
+
+    public int getPoints()
+    {
+        return _score;
+    }
+
+    public void setPoints(int newPoints)
+    {
+        _score = newPoints;
+        _UIManager.UpdateScore(_score);
+    }
 }
