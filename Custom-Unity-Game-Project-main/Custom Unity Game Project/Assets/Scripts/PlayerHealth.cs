@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("FailureScreen");
         }
 
-        if (_score >= 250)
+        if (_score >= 1000)
         {
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("WinScreen");

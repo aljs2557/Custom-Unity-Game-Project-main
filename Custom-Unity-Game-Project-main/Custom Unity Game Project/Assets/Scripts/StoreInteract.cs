@@ -45,7 +45,7 @@ public class StoreInteract : MonoBehaviour
 
     public int findCost(int check)
     {
-        if (fireAmount == 0)
+        if (check == 0)
         {
             return 50;
         }
@@ -71,7 +71,14 @@ public class StoreInteract : MonoBehaviour
 
             firingSpeed.setFireSpeed(firingSpeed.getFireSpeed() * .5f);
             fireUpgrade.text = fireAmount + "/5";
-            fireCost.text = "Cost: " + findCost(fireAmount) + " points";
+            if (fireAmount < 5)
+            {
+                fireCost.text = "Cost: " + findCost(fireAmount) + " points";
+            }
+            else
+            {
+                fireCost.text = "Max Level";
+            }
             Debug.Log(firingSpeed.getFireSpeed());
         }
     }
@@ -84,7 +91,14 @@ public class StoreInteract : MonoBehaviour
             damageAmount++;
 
             damageUpgrade.text = damageAmount + "/5";
-            damageCost.text = "Cost: " + findCost(damageAmount) + " points";
+            if (damageAmount < 5)
+            {
+                damageCost.text = "Cost: " + findCost(damageAmount) + " points";
+            }
+            else
+            {
+                damageCost.text = "Max Level";
+            }
             damage.setDamage((int)(damage.getDamage() * 1.5));
             Debug.Log(damage.getDamage());
         }
@@ -98,7 +112,14 @@ public class StoreInteract : MonoBehaviour
             speedAmount++;
 
             speedUpgrade.text = speedAmount + "/5";
-            speedCost.text = "Cost: " + findCost(speedAmount) + " points";
+            if (speedAmount < 5)
+            {
+                speedCost.text = "Cost: " + findCost(speedAmount) + " points";
+            }
+            else
+            {
+                speedCost.text = "Max Level";
+            }
             speed.setSpeed((float)(speed.getSpeed() * 1.5));
             speed.setRunningSpeed((float)(speed.getRunningSpeed() * 1.5));
             Debug.Log(speed.getSpeed() + " " + speed.getRunningSpeed());
@@ -113,7 +134,14 @@ public class StoreInteract : MonoBehaviour
             defenseAmount++;
 
             defenseUpgrade.text = defenseAmount + "/5";
-            defenseCost.text = "Cost: " + findCost(defenseAmount) + " points";
+            if (defenseAmount < 5)
+            {
+                defenseCost.text = "Cost: " + findCost(defenseAmount) + " points";
+            }
+            else
+            {
+                defenseCost.text = "Max Level";
+            }
             defense.setDefense((int)(defense.getDefense() * .8));
             Debug.Log(defense.getDefense());
         }

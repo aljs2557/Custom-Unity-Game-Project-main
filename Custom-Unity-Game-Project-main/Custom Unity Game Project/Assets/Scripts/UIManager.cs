@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _scoreText.text = "Score: " + 0;
+        _scoreText.text = "Points: " + 0;
         _healthText.text = "Health: " + 100;
     }
 
@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScore(int playerScore)
     {
-        _scoreText.text = "Score: " + playerScore.ToString();
+        _scoreText.text = "Points: " + playerScore.ToString();
     }
 
     public void UpdateHealth(int playerHealth)
