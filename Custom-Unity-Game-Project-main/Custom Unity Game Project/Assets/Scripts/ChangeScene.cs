@@ -10,7 +10,7 @@ public class ChangeScene : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("TitleScreen");
+        SceneManager.LoadScene("Level01");
     }
 
     public void LoadTitle()
