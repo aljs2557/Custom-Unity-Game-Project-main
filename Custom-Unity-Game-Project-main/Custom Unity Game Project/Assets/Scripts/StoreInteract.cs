@@ -26,6 +26,9 @@ public class StoreInteract : MonoBehaviour
     private int speedAmount = 0;
     private int defenseAmount = 0;
 
+    public AudioClip store;
+    public AudioClip level1;
+
     // Start is called before the first frame update
     void Start()
     {
